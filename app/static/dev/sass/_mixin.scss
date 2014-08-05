@@ -17,10 +17,3 @@
         color: $font-color;
     }
 }
-
-@mixin transition($time) {
-    -webkit-transition: width $time linear !important;
-    -moz-transition: width $time linear !important;
-    -o-transition: width $time linear !important;
-    transition: width $time linear !important;
-}

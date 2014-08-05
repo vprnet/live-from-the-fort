@@ -9,8 +9,8 @@
             <div class="col-md-8">
             {% for band in bands %}
                 {% if loop.first %}
-                    <div class="featured video_tease">
-                        {% include "_video_tease.html" %}
+                    <div class="video_wrapper">
+                        <iframe class="band_video" width="560" height="315" src="{{ band.youtubelink }}" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <h2>{{ band.bandname }}</h2>
                     <hr>
