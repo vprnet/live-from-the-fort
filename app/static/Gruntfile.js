@@ -13,7 +13,7 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     // Explicitly list files to determine order
-                    'dev/js/*.js'
+                    'dev/js/base.js'
                 ],
                 dest: 'js/script.js'
             }

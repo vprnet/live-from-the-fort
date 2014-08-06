@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-12 col-sm-6">
+        <div class="email_signup">
+            <img class="img-responsive" src="{{ url_for('static', filename='img/vpr-live-from-fort-art.jpg') }}" alt="Live From The Fort">
+            <p class="email_prompt">Sign Up For Updates From The Fort</p>
+            {% include "_email_form.html" %}
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-6">
+        {% include "_underwriter.html" %}
+    </div>
+</div>

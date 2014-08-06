@@ -8535,6 +8535,11 @@ footer span#copyright {
   width: 100%;
   height: 100%;
 }
+/* line 14, ../dev/sass/_video.scss */
+.video_wrapper .video_tease {
+  margin-top: -25px;
+  z-index: 5;
+}
 
 /* line 10, ../dev/sass/style.scss */
 hr {
