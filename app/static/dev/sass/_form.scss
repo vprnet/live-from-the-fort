@@ -1,0 +1,31 @@
+.email_signup {
+    max-width: 300px;
+    background: lighten($purple, 20%);
+    padding: 10px;
+    margin: 0 auto 30px;
+    @include border-radius(3px);
+    @media (min-width: $laptop) {
+        float: right;
+    }
+    .email_prompt {
+        color: $gold2;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.5em;
+        line-height: 1em;
+        margin-bottom: 20px;
+    }
+    img {
+        margin-bottom: 20px;
+    }
+    form {
+        .subscriptions {
+            display: none;
+        }
+        .btn-default {
+            width: 100%;
+            background: $gold2;
+        }
+    }
+}
+

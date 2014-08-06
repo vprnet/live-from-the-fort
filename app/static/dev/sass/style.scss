@@ -6,19 +6,10 @@
 @import "vpr-svg";
 @import "ionicons";
 @import "video";
+@import "form";
 
 hr {
     border-color: lighten($purple, 40%);
-}
-
-.email_signup {
-    max-width: 300px;
-    background: $gold2;
-    padding: 10px;
-    margin: 0 auto 30px;
-    @media (min-width: $laptop) {
-        float: right;
-    }
 }
 
 #underwriter {
