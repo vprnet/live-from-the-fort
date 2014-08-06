@@ -9,6 +9,7 @@ def index():
     page_url = BASE_URL + request.path
     page_title = 'Live From The Fort'
     bands = get_bands()
+    landing = True
 
     social = {
         'title': "Live From The Fort",
@@ -23,6 +24,7 @@ def index():
         page_title=page_title,
         social=social,
         bands=bands,
+        landing=landing,
         page_url=page_url)
 
 
@@ -46,7 +48,7 @@ def band_page(bandname):
         'twitter_hashtag': ""
     }
 
-    return render_template('band.html',
+    return render_template('content.html',
         page_title=page_title,
         social=social,
         bands=bands,
