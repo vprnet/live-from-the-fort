@@ -5518,14 +5518,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 
 /* line 18, ../dev/sass/_vpr.scss */
 a {
-  border-bottom: 2px solid #e6e6e6;
-  color: #4b5151;
-}
-/* line 14, ../dev/sass/_mixin.scss */
-a:hover {
-  text-decoration: none;
-  border-color: #999999;
-  color: #3f4444;
+  color: #307fe2;
 }
 
 /* line 22, ../dev/sass/_vpr.scss */
@@ -5556,12 +5549,12 @@ html, body {
 .navbar a.navbar-brand {
   padding: 10px 15px 5px;
 }
-/* line 44, ../dev/sass/_vpr.scss */
-.navbar a {
-  border: 0;
+/* line 45, ../dev/sass/_vpr.scss */
+.navbar a:hover {
+  text-decoration: none;
 }
 
-/* line 49, ../dev/sass/_vpr.scss */
+/* line 51, ../dev/sass/_vpr.scss */
 footer {
   background: #646c6c;
   font-size: 12px;
@@ -5569,7 +5562,7 @@ footer {
   padding: 20px 0 10px;
   margin-top: -57px;
 }
-/* line 55, ../dev/sass/_vpr.scss */
+/* line 57, ../dev/sass/_vpr.scss */
 footer a {
   border-bottom: 2px solid #7c8686;
   color: #d9d9d9;
@@ -5580,12 +5573,12 @@ footer a:hover {
   border-color: #ccd0d0;
   color: #e6e6e6;
 }
-/* line 58, ../dev/sass/_vpr.scss */
+/* line 60, ../dev/sass/_vpr.scss */
 footer span#copyright {
   float: right;
 }
 
-/* line 64, ../dev/sass/_vpr.scss */
+/* line 66, ../dev/sass/_vpr.scss */
 #underwriter p {
   font-size: 12px;
   padding-left: 0;
@@ -5593,58 +5586,47 @@ footer span#copyright {
   text-align: center;
   color: #8f9294;
 }
-/* line 70, ../dev/sass/_vpr.scss */
+/* line 72, ../dev/sass/_vpr.scss */
 #underwriter p li {
   display: inline;
 }
-/* line 73, ../dev/sass/_vpr.scss */
-#underwriter p a {
-  border-bottom: 2px solid #e6e6e6;
-  color: #828588;
-}
-/* line 14, ../dev/sass/_mixin.scss */
-#underwriter p a:hover {
-  text-decoration: none;
-  border-color: #999999;
-  color: #75787b;
-}
 @media (max-width: 330px) {
-  /* line 63, ../dev/sass/_vpr.scss */
+  /* line 65, ../dev/sass/_vpr.scss */
   #underwriter {
     margin-left: -5px;
   }
 }
 
-/* line 82, ../dev/sass/_vpr.scss */
+/* line 81, ../dev/sass/_vpr.scss */
 #social-logos {
   display: inline;
   height: 40px;
   width: 300px;
 }
-/* line 86, ../dev/sass/_vpr.scss */
+/* line 85, ../dev/sass/_vpr.scss */
 #social-logos a {
   float: right;
   margin-top: 2px;
   padding: 5px 0 5px 10px;
 }
-/* line 90, ../dev/sass/_vpr.scss */
+/* line 89, ../dev/sass/_vpr.scss */
 #social-logos a div {
   background-size: 100%;
 }
 @media (max-width: 768px) {
-  /* line 94, ../dev/sass/_vpr.scss */
+  /* line 93, ../dev/sass/_vpr.scss */
   #social-logos a:first-child {
     margin-right: 15px;
   }
 }
 
 @media (max-width: 768px) {
-  /* line 102, ../dev/sass/_vpr.scss */
+  /* line 101, ../dev/sass/_vpr.scss */
   footer {
     padding-bottom: 20px;
   }
 
-  /* line 105, ../dev/sass/_vpr.scss */
+  /* line 104, ../dev/sass/_vpr.scss */
   #body {
     margin-left: 5px;
   }
@@ -8952,7 +8934,7 @@ footer span#copyright {
   padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 /* line 7, ../dev/sass/_video.scss */
 .video_wrapper iframe {
@@ -8966,6 +8948,44 @@ footer span#copyright {
 .video_wrapper .video_tease {
   margin-top: -25px;
   z-index: 5;
+}
+
+/* line 20, ../dev/sass/_video.scss */
+.video_tease {
+  position: relative;
+  width: 100%;
+}
+/* line 23, ../dev/sass/_video.scss */
+.video_tease i.play_tease {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 40%;
+  font-size: 42px;
+  text-shadow: 1px 1px #3f4444;
+  color: #eaebeb;
+}
+/* line 32, ../dev/sass/_video.scss */
+.video_tease div.black_film {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  -webkit-transition: opacity 0.25s;
+  -moz-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+/* line 40, ../dev/sass/_video.scss */
+.video_tease div.black_film:hover {
+  opacity: 0.2;
+}
+
+/* line 47, ../dev/sass/_video.scss */
+.video_tease.featured i.play_tease {
+  font-size: 72px;
 }
 
 /* line 1, ../dev/sass/_form.scss */
@@ -9009,23 +9029,55 @@ footer span#copyright {
   background: #ffd57d;
 }
 
-/* line 11, ../dev/sass/style.scss */
+/* line 2, ../dev/sass/_band_detail.scss */
+.band_page h2 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: underline;
+}
+/* line 10, ../dev/sass/_band_detail.scss */
+.band_page .band_members h3, .band_page .setlist h3 {
+  text-decoration: underline;
+}
+/* line 13, ../dev/sass/_band_detail.scss */
+.band_page .band_members p, .band_page .setlist p {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+/* line 17, ../dev/sass/_band_detail.scss */
+.band_page .band_members p.detail, .band_page .setlist p.detail {
+  font-size: 12px;
+  font-weight: 400;
+  color: #75787b;
+}
+/* line 22, ../dev/sass/_band_detail.scss */
+.band_page .band_members .band_member, .band_page .band_members .song, .band_page .setlist .band_member, .band_page .setlist .song {
+  margin-bottom: 5px;
+}
+/* line 26, ../dev/sass/_band_detail.scss */
+.band_page .setlist {
+  text-align: right;
+}
+
+/* line 12, ../dev/sass/style.scss */
 hr {
   border-color: #d1bbd3;
 }
 
-/* line 15, ../dev/sass/style.scss */
+/* line 16, ../dev/sass/style.scss */
 #underwriter {
   margin: 0 auto 30px;
 }
 @media (min-width: 768px) {
-  /* line 15, ../dev/sass/style.scss */
+  /* line 16, ../dev/sass/style.scss */
   #underwriter {
     float: right;
   }
 }
 
-/* line 22, ../dev/sass/style.scss */
+/* line 23, ../dev/sass/style.scss */
 #navbar-title {
   color: #ffd57d;
   font-size: 42px;
@@ -9034,51 +9086,22 @@ hr {
   position: relative;
   left: 15px;
 }
-/* line 29, ../dev/sass/style.scss */
+/* line 30, ../dev/sass/style.scss */
 #navbar-title .live_from {
   font-family: GrandHotel Regular;
 }
 @media (max-width: 768px) {
-  /* line 22, ../dev/sass/style.scss */
+  /* line 23, ../dev/sass/style.scss */
   #navbar-title {
     display: none;
   }
 }
 
-/* line 37, ../dev/sass/style.scss */
-.video_tease {
-  position: relative;
-  width: 100%;
+/* line 38, ../dev/sass/style.scss */
+.preview {
+  margin-bottom: 30px;
 }
 /* line 40, ../dev/sass/style.scss */
-.video_tease i.play_tease {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  top: 40%;
-  font-size: 42px;
-  text-shadow: 1px 1px #3f4444;
-  color: #eaebeb;
-}
-/* line 49, ../dev/sass/style.scss */
-.video_tease div.black_film {
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  height: 100%;
-  width: 100%;
-  background: black;
-  -webkit-transition: opacity 0.25s;
-  -moz-transition: opacity 0.25s;
-  -o-transition: opacity 0.25s;
-  transition: opacity 0.25s;
-}
-/* line 57, ../dev/sass/style.scss */
-.video_tease div.black_film:hover {
-  opacity: 0.2;
-}
-
-/* line 64, ../dev/sass/style.scss */
-.video_tease.featured i.play_tease {
-  font-size: 72px;
+.preview h3.preview_bandname {
+  margin-top: 10px;
 }

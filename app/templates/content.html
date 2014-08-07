@@ -3,10 +3,10 @@
 {% block title %}{{ page_title }} | VPR{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container{% if not landing %} band_page{% endif %}">
     <div class="row">
         <div class="col-md-8">
-        {% include "_main_block.html" %}
+            {% include "_main_block.html" %}
         </div>
         <div class="col-md-4">
             {% include "_sidebar.html" %}

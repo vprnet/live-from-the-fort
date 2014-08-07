@@ -1,0 +1,29 @@
+.band_page {
+    h2 {
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .band_members, .setlist {
+        h3 {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+        p.detail {
+            font-size: 12px;
+            font-weight: 400;
+            color: $gray;
+        }
+        .band_member, .song {
+            margin-bottom: 5px;
+        }
+    }
+    .setlist {
+        text-align: right;
+    }
+}

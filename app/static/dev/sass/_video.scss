@@ -3,7 +3,7 @@
     padding-bottom: 56.25%;
     padding-top: 25px;
     height: 0;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     iframe {
         position: absolute;
         top: 0;
@@ -17,3 +17,34 @@
     }
 }
 
+.video_tease {
+    position: relative;
+    width: 100%;
+    i.play_tease {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 40%;
+        font-size: 42px;
+        text-shadow: 1px 1px $black;
+        color: lighten($gray, 45%);
+    }
+    div.black_film {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        background: black;
+        @include transition(opacity 0.25s);
+        &:hover {
+            opacity: 0.2;
+        }
+    }
+}
+
+.video_tease.featured {
+    i.play_tease {
+        font-size: 72px;
+    }
+}

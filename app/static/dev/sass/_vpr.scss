@@ -16,7 +16,7 @@ $gold: #f2e6bd;
 $gold2: #ffd57d;
 
 a {
-    @include lt_link($black, white, 2px);
+    color: $blue;
 }
 
 html, body {
@@ -42,7 +42,9 @@ html, body {
         padding: 10px 15px 5px;
     }
     a {
-        border: 0;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
@@ -69,9 +71,6 @@ footer {
         color: lighten($gray, 10%);
         li {
             display: inline
-        }
-        a {
-            @include lt_link($gray, white, 2px);
         }
     }
     @media (max-width: 330px) {

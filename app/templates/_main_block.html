@@ -9,16 +9,19 @@
             </div>
         </div>
         <h2>{{ band.bandname }}</h2>
+        {% if not landing %}
+            {% include "_band_detail.html" %}
+        {% endif %}
         <hr>
     {% else %}
         {% if loop.index is divisibleby 2 %}
         <div class="row">
         {% endif %}
-            <div class="col-sm-6">
+            <div class="preview col-sm-6">
                 <div class="video_tease">
                     {% include "_video_tease.html" %}
                 </div>
-                <h3>{{ band.bandname }}</h3>
+                <h3 class="preview_bandname">{{ band.bandname }}</h3>
             </div>
         {% if loop.index0 is divisibleby 2 %}
         </div>

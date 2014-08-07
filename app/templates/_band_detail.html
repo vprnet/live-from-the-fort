@@ -1,0 +1,28 @@
+<div class="band_detail">
+    <div class="row">
+        <div class="col-sm-6 setlist">
+            <p class="download_audio"><a href="{{ band.audiofile }}" alt="MP3 of {{ band.bandname }}'s performance" download>Download Audio</a></p>
+            <h3>The Set List</h3>
+            {% for song in band.setlist %}
+                <div class="song">
+                    <p>{{ song }}</p>
+                    {% if loop.index is divisibleby 2 %}
+                    <p class="detail"><i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i></p>
+                    {% else %}
+                    <p class="detail"><i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i></p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col-sm-6 band_members">
+            <p><a href="{{ band.bandwebsite }}" alt="{{ band.bandname }}'s website">Band Website</a></p>
+            <h3>The Band</h3>
+            {% for member in band.bandmembers %}
+                <div class="band_member">
+                    <p class="member_name">{{ member.name }}</p>
+                    <p class="detail">{{ member.instrument }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
