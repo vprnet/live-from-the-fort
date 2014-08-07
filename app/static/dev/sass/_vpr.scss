@@ -11,9 +11,10 @@ $tablet: 768px;
 $phone: 500px;
 $laptop: 1000px;
 $big-screen: 1200px;
-$purple: #734d75;
+$purple: darken($black, 10%);
 $gold: #f2e6bd;
 $gold2: #ffd57d;
+$white: darken(white, 5%);
 
 a {
     color: $blue;
@@ -31,19 +32,39 @@ html, body {
 
 .navbar {
     border: 0;
-    overflow: hidden;
     border-radius: 0;
     background-color: $purple;
-    min-height: 40px;
+    min-height: 45px;
     .navbar-header {
         float: none;
-    }
-    a.navbar-brand {
-        padding: 10px 15px 5px;
-    }
-    a {
-        &:hover {
-            text-decoration: none;
+        position: relative;
+        a {
+            color: $white;
+            &:hover {
+                color: $blue;
+                text-decoration: none;
+            }
+        }
+        #vpr_logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        h1#navbar-title {
+            margin-top: 10px;
+            font-size: 26px;
+            font-weight: 400;
+            text-align: center;
+        }
+        #social-logos {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: 300;
+            li {
+                font-size: 32px;
+                padding-left: 8px;
+            }
         }
     }
 }
@@ -52,10 +73,12 @@ footer {
     background: lighten($black, 15%);
     font-size: 12px;
     color: darken(white, 10%);
-    padding: 20px 0 10px;
     margin-top: -57px;
+    padding: 20px 0 10px;
+    @media (max-width: $tablet) {
+        padding-bottom: 20px;
+    }
     a {
-        @include dk_link(darken(white, 10%), lighten($black, 15%), 2px);
     }
     span#copyright {
         float: right;
@@ -77,32 +100,3 @@ footer {
         margin-left: -5px;
     }
 }
-
-#social-logos {
-    display: inline;
-    height: 40px;
-    width: 300px;
-    a {
-        float: right;
-        margin-top: 2px;
-        padding: 5px 0 5px 10px;
-        div {
-            background-size: 100%;
-        }
-        @media (max-width: $tablet) {
-            &:first-child {
-                margin-right: 15px;
-            }
-        }
-    }
-}
-
-@media (max-width: $tablet) {
-    footer {
-        padding-bottom: 20px;
-    }
-    #body {
-        margin-left: 5px;
-    }
-}
-

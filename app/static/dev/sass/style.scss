@@ -9,8 +9,18 @@
 @import "form";
 @import "band_detail";
 
+.molat {
+    font-family: Molot;
+    font-size: 48px;
+    line-height: 55px;
+}
+
 hr {
-    border-color: lighten($purple, 40%);
+    border-top: 5px solid lighten($purple, 10%);
+}
+
+h1, h2, h3 {
+    font-family: Molot;
 }
 
 #underwriter {
@@ -20,18 +30,55 @@ hr {
     }
 }
 
-#navbar-title {
-    color: $gold2;
-    font-size: 42px;
-    font-family: Molot;
-    display: inline;
-    position: relative;
-    left: 15px;
-    .live_from {
-        font-family: GrandHotel Regular;
+.navbar {
+    min-height: 63px;
+    @media (max-width: $phone) {
+        min-height: 45px;
     }
-    @media (max-width: $tablet) {
-        display: none;
+    .navbar-header {
+        @media (max-width: $tablet) {
+            padding: 0 15px 0;
+        }
+        #navbar-title {
+            a {
+                color: lighten($gold, 10%);
+                &:hover {
+                    color: $blue;
+                }
+            }
+            font-size: 36px !important;
+            @media (max-width: $phone) {
+                font-size: 24px !important;
+            }
+            font-family: Molot;
+            span.live_from {
+                font-family: GrandHotel Regular;
+            }
+            @media (max-width: $tablet) {
+                text-align: left !important;
+            }
+        }
+
+        #social-logos {
+            top: 8px !important;
+            @media (max-width: $phone) {
+                top: 0 !important;
+            }
+            li {
+                i.icon {
+                    @media (max-width: $phone) {
+                        font-size: 24px !important;
+                    }
+                }
+            }
+        }
+
+        #vpr_logo {
+            top: 8px !important;
+            @media (max-width: $tablet) {
+                display: none;
+            }
+        }
     }
 }
 
@@ -40,4 +87,15 @@ hr {
     h3.preview_bandname {
         margin-top: 10px;
     }
+}
+
+.email_icon {
+    font-size: 120px;
+    text-align: center;
+    color: white;
+    line-height: 100px;
+}
+
+.email_signup {
+    min-width: 300px;
 }
