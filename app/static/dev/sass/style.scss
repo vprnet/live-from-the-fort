@@ -10,7 +10,11 @@
 @import "band_detail";
 
 hr {
-    border-color: lighten($purple, 40%);
+    border-top: 5px solid lighten($purple, 10%);
+}
+
+h1, h2, h3 {
+    font-family: Molot;
 }
 
 #underwriter {
@@ -21,14 +25,15 @@ hr {
 }
 
 #navbar-title {
-    color: $gold2;
+    color: lighten($gold, 10%);
     font-size: 42px;
     font-family: Molot;
     display: inline;
     position: relative;
     left: 15px;
-    .live_from {
-        font-family: GrandHotel Regular;
+    top: 14px;
+    &:hover {
+        color: $blue;
     }
     @media (max-width: $tablet) {
         display: none;
@@ -40,4 +45,15 @@ hr {
     h3.preview_bandname {
         margin-top: 10px;
     }
+}
+
+.email_icon {
+    font-size: 120px;
+    text-align: center;
+    color: white;
+    line-height: 100px;
+}
+
+.email_signup {
+    min-width: 300px;
 }

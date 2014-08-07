@@ -5539,7 +5539,7 @@ html, body {
   overflow: hidden;
   border-radius: 0;
   background-color: #262a2a;
-  min-height: 40px;
+  min-height: 50px;
 }
 /* line 38, ../dev/sass/_vpr.scss */
 .navbar .navbar-header {
@@ -5548,13 +5548,14 @@ html, body {
 /* line 41, ../dev/sass/_vpr.scss */
 .navbar a.navbar-brand {
   padding: 10px 15px 5px;
+  display: none;
 }
-/* line 45, ../dev/sass/_vpr.scss */
+/* line 46, ../dev/sass/_vpr.scss */
 .navbar a:hover {
   text-decoration: none;
 }
 
-/* line 51, ../dev/sass/_vpr.scss */
+/* line 52, ../dev/sass/_vpr.scss */
 footer {
   background: #646c6c;
   font-size: 12px;
@@ -5562,7 +5563,7 @@ footer {
   padding: 20px 0 10px;
   margin-top: -57px;
 }
-/* line 57, ../dev/sass/_vpr.scss */
+/* line 58, ../dev/sass/_vpr.scss */
 footer a {
   border-bottom: 2px solid #7c8686;
   color: #d9d9d9;
@@ -5573,12 +5574,12 @@ footer a:hover {
   border-color: #ccd0d0;
   color: #e6e6e6;
 }
-/* line 60, ../dev/sass/_vpr.scss */
+/* line 61, ../dev/sass/_vpr.scss */
 footer span#copyright {
   float: right;
 }
 
-/* line 66, ../dev/sass/_vpr.scss */
+/* line 67, ../dev/sass/_vpr.scss */
 #underwriter p {
   font-size: 12px;
   padding-left: 0;
@@ -5586,47 +5587,45 @@ footer span#copyright {
   text-align: center;
   color: #8f9294;
 }
-/* line 72, ../dev/sass/_vpr.scss */
+/* line 73, ../dev/sass/_vpr.scss */
 #underwriter p li {
   display: inline;
 }
 @media (max-width: 330px) {
-  /* line 65, ../dev/sass/_vpr.scss */
+  /* line 66, ../dev/sass/_vpr.scss */
   #underwriter {
     margin-left: -5px;
   }
 }
 
-/* line 81, ../dev/sass/_vpr.scss */
+/* line 82, ../dev/sass/_vpr.scss */
 #social-logos {
-  display: inline;
-  height: 40px;
-  width: 300px;
-}
-/* line 85, ../dev/sass/_vpr.scss */
-#social-logos a {
   float: right;
-  margin-top: 2px;
-  padding: 5px 0 5px 10px;
+  font-weight: 300;
+  height: 20px;
+  padding-top: 8px;
 }
-/* line 89, ../dev/sass/_vpr.scss */
-#social-logos a div {
-  background-size: 100%;
+/* line 86, ../dev/sass/_vpr.scss */
+#social-logos li {
+  padding-top: 6px;
+  font-size: 36px;
 }
-@media (max-width: 768px) {
-  /* line 93, ../dev/sass/_vpr.scss */
-  #social-logos a:first-child {
-    margin-right: 15px;
-  }
+/* line 90, ../dev/sass/_vpr.scss */
+#social-logos a {
+  color: #faf6e8;
+}
+/* line 92, ../dev/sass/_vpr.scss */
+#social-logos a:hover {
+  color: #307fe2;
 }
 
 @media (max-width: 768px) {
-  /* line 101, ../dev/sass/_vpr.scss */
+  /* line 100, ../dev/sass/_vpr.scss */
   footer {
     padding-bottom: 20px;
   }
 
-  /* line 104, ../dev/sass/_vpr.scss */
+  /* line 103, ../dev/sass/_vpr.scss */
   #body {
     margin-left: 5px;
   }
@@ -9063,45 +9062,64 @@ footer span#copyright {
 
 /* line 12, ../dev/sass/style.scss */
 hr {
-  border-color: #8a9292;
+  border-top: 5px solid #3f4444;
 }
 
 /* line 16, ../dev/sass/style.scss */
+h1, h2, h3 {
+  font-family: Molot;
+}
+
+/* line 20, ../dev/sass/style.scss */
 #underwriter {
   margin: 0 auto 30px;
 }
 @media (min-width: 768px) {
-  /* line 16, ../dev/sass/style.scss */
+  /* line 20, ../dev/sass/style.scss */
   #underwriter {
     float: right;
   }
 }
 
-/* line 23, ../dev/sass/style.scss */
+/* line 27, ../dev/sass/style.scss */
 #navbar-title {
-  color: #ffd57d;
+  color: #faf6e8;
   font-size: 42px;
   font-family: Molot;
   display: inline;
   position: relative;
   left: 15px;
+  top: 14px;
 }
-/* line 30, ../dev/sass/style.scss */
-#navbar-title .live_from {
-  font-family: GrandHotel Regular;
+/* line 35, ../dev/sass/style.scss */
+#navbar-title:hover {
+  color: #307fe2;
 }
 @media (max-width: 768px) {
-  /* line 23, ../dev/sass/style.scss */
+  /* line 27, ../dev/sass/style.scss */
   #navbar-title {
     display: none;
   }
 }
 
-/* line 38, ../dev/sass/style.scss */
+/* line 43, ../dev/sass/style.scss */
 .preview {
   margin-bottom: 30px;
 }
-/* line 40, ../dev/sass/style.scss */
+/* line 45, ../dev/sass/style.scss */
 .preview h3.preview_bandname {
   margin-top: 10px;
+}
+
+/* line 50, ../dev/sass/style.scss */
+.email_icon {
+  font-size: 120px;
+  text-align: center;
+  color: white;
+  line-height: 100px;
+}
+
+/* line 57, ../dev/sass/style.scss */
+.email_signup {
+  min-width: 300px;
 }

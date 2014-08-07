@@ -34,12 +34,13 @@ html, body {
     overflow: hidden;
     border-radius: 0;
     background-color: $purple;
-    min-height: 40px;
+    min-height: 50px;
     .navbar-header {
         float: none;
     }
     a.navbar-brand {
         padding: 10px 15px 5px;
+        display: none;
     }
     a {
         &:hover {
@@ -79,22 +80,20 @@ footer {
 }
 
 #social-logos {
-    display: inline;
-    height: 40px;
-    width: 300px;
+    float: right;
+    font-weight: 300;
+    height: 20px;
+    li {
+        padding-top: 6px;
+        font-size: 36px;
+    }
     a {
-        float: right;
-        margin-top: 2px;
-        padding: 5px 0 5px 10px;
-        div {
-            background-size: 100%;
-        }
-        @media (max-width: $tablet) {
-            &:first-child {
-                margin-right: 15px;
-            }
+        color: lighten($gold, 10%);
+        &:hover {
+            color: $blue;
         }
     }
+    padding-top: 8px;
 }
 
 @media (max-width: $tablet) {
