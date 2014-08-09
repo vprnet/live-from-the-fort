@@ -16,7 +16,7 @@
 }
 
 hr {
-    border-top: 5px solid lighten($purple, 10%);
+    border-top: 5px solid lighten($black, 10%);
 }
 
 h1, h2, h3 {
@@ -24,8 +24,11 @@ h1, h2, h3 {
 }
 
 #underwriter {
-    margin: 0 auto 30px;
-    @media (min-width: $tablet) {
+    div {
+        display: block;
+        margin: 0 auto;
+    }
+    @media (min-width: $laptop) {
         float: right;
     }
 }
@@ -59,10 +62,10 @@ h1, h2, h3 {
             }
         }
 
-        #social-logos {
+        .social_logos {
             top: 8px !important;
             @media (max-width: $phone) {
-                top: 0 !important;
+                top: -2px !important;
             }
             li {
                 i.icon {
@@ -83,19 +86,40 @@ h1, h2, h3 {
 }
 
 .preview {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     h3.preview_bandname {
         margin-top: 10px;
     }
 }
 
-.email_icon {
-    font-size: 120px;
-    text-align: center;
-    color: white;
-    line-height: 100px;
+.this_month {
+    font-weight: 600;
+    color: $gray;
+    margin: 20px 0 0;
+    @media (max-width: $phone) {
+        margin-top: 5px;
+    }
+    line-height: 12px;
+    font-size: 12px;
 }
 
-.email_signup {
-    min-width: 300px;
+.landing {
+    .featured_band {
+        margin-top: 0;
+    }
+}
+
+.bandname {
+    color: $black2;
+    &:hover {
+        color: $blue;
+        text-decoration: none;
+    }
+}
+
+.about {
+    margin-bottom: 30px;
+    p {
+        font-size: 18px;
+    }
 }

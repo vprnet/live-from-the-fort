@@ -3,7 +3,6 @@
     padding-bottom: 56.25%;
     padding-top: 25px;
     height: 0;
-    margin-bottom: 10px;
     iframe {
         position: absolute;
         top: 0;
@@ -14,6 +13,54 @@
     .video_tease {
         margin-top: -25px;
         z-index: 5;
+    }
+}
+
+.below_video {
+    display: none;
+}
+
+.band_page {
+    .below_video {
+        @media (max-width: $phone) {
+            font-size: 12px;
+        }
+        display: block;
+        position: relative;
+        margin: -8px 0 30px;
+        @media (max-width: $phone) {
+            margin-top: -14px;
+        }
+        height: 40px;
+        width: 100%;
+        .extras, .social_logos {
+            position: absolute;
+            bottom: 0;
+            color: $black2;
+            font-weight: 500;
+            a {
+                color: $black2;
+                &:hover {
+                    text-decoration: none;
+                    color: $blue;
+                }
+            }
+        }
+        .extras {
+            position: absolute;
+            bottom: 0;
+            left: 5px;
+        }
+        .social_logos {
+            position: absolute;
+            bottom: 0;
+            right: 5px;
+        }
+        .share_this {
+            @media (max-width: $phone) {
+                display: none;
+            }
+        }
     }
 }
 
@@ -46,5 +93,8 @@
 .video_tease.featured {
     i.play_tease {
         font-size: 72px;
+        @media (max-width: $phone) {
+            font-size: 42px;
+        }
     }
 }

@@ -11,7 +11,7 @@ $tablet: 768px;
 $phone: 500px;
 $laptop: 1000px;
 $big-screen: 1200px;
-$purple: darken($black, 10%);
+$black2: darken($black, 10%);
 $gold: #f2e6bd;
 $gold2: #ffd57d;
 $white: darken(white, 5%);
@@ -33,7 +33,7 @@ html, body {
 .navbar {
     border: 0;
     border-radius: 0;
-    background-color: $purple;
+    background-color: $black;
     min-height: 45px;
     .navbar-header {
         float: none;
@@ -56,7 +56,7 @@ html, body {
             font-weight: 400;
             text-align: center;
         }
-        #social-logos {
+        .social_logos {
             position: absolute;
             top: 0;
             right: 0;

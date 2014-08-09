@@ -1,7 +1,6 @@
 <div class="band_detail">
     <div class="row">
         <div class="col-sm-6 setlist">
-            <p class="download_audio"><a href="{{ band.audiofile }}" alt="MP3 of {{ band.bandname }}'s performance" download>Download Audio</a></p>
             <h3>The Set List</h3>
             {% for song in band.setlist %}
                 <div class="song">
@@ -15,7 +14,6 @@
             {% endfor %}
         </div>
         <div class="col-sm-6 band_members">
-            <p><a href="{{ band.bandwebsite }}" alt="{{ band.bandname }}'s website">Band Website</a></p>
             <h3>The Band</h3>
             {% for member in band.bandmembers %}
                 <div class="band_member">

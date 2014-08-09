@@ -5537,7 +5537,7 @@ html, body {
 .navbar {
   border: 0;
   border-radius: 0;
-  background-color: #262a2a;
+  background-color: #3f4444;
   min-height: 45px;
 }
 /* line 38, ../dev/sass/_vpr.scss */
@@ -5568,14 +5568,14 @@ html, body {
   text-align: center;
 }
 /* line 59, ../dev/sass/_vpr.scss */
-.navbar .navbar-header #social-logos {
+.navbar .navbar-header .social_logos {
   position: absolute;
   top: 0;
   right: 0;
   font-weight: 300;
 }
 /* line 64, ../dev/sass/_vpr.scss */
-.navbar .navbar-header #social-logos li {
+.navbar .navbar-header .social_logos li {
   font-size: 32px;
   padding-left: 8px;
 }
@@ -8899,9 +8899,8 @@ footer span#copyright {
   padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0;
-  margin-bottom: 10px;
 }
-/* line 7, ../dev/sass/_video.scss */
+/* line 6, ../dev/sass/_video.scss */
 .video_wrapper iframe {
   position: absolute;
   top: 0;
@@ -8909,18 +8908,78 @@ footer span#copyright {
   width: 100%;
   height: 100%;
 }
-/* line 14, ../dev/sass/_video.scss */
+/* line 13, ../dev/sass/_video.scss */
 .video_wrapper .video_tease {
   margin-top: -25px;
   z-index: 5;
 }
 
-/* line 20, ../dev/sass/_video.scss */
+/* line 19, ../dev/sass/_video.scss */
+.below_video {
+  display: none;
+}
+
+/* line 24, ../dev/sass/_video.scss */
+.band_page .below_video {
+  display: block;
+  position: relative;
+  margin: -8px 0 30px;
+  height: 40px;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  /* line 24, ../dev/sass/_video.scss */
+  .band_page .below_video {
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  /* line 24, ../dev/sass/_video.scss */
+  .band_page .below_video {
+    margin-top: -14px;
+  }
+}
+/* line 36, ../dev/sass/_video.scss */
+.band_page .below_video .extras, .band_page .below_video .social_logos {
+  position: absolute;
+  bottom: 0;
+  color: #262a2a;
+  font-weight: 500;
+}
+/* line 41, ../dev/sass/_video.scss */
+.band_page .below_video .extras a, .band_page .below_video .social_logos a {
+  color: #262a2a;
+}
+/* line 43, ../dev/sass/_video.scss */
+.band_page .below_video .extras a:hover, .band_page .below_video .social_logos a:hover {
+  text-decoration: none;
+  color: #307fe2;
+}
+/* line 49, ../dev/sass/_video.scss */
+.band_page .below_video .extras {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+}
+/* line 54, ../dev/sass/_video.scss */
+.band_page .below_video .social_logos {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+@media (max-width: 500px) {
+  /* line 59, ../dev/sass/_video.scss */
+  .band_page .below_video .share_this {
+    display: none;
+  }
+}
+
+/* line 67, ../dev/sass/_video.scss */
 .video_tease {
   position: relative;
   width: 100%;
 }
-/* line 23, ../dev/sass/_video.scss */
+/* line 70, ../dev/sass/_video.scss */
 .video_tease i.play_tease {
   position: absolute;
   text-align: center;
@@ -8930,7 +8989,7 @@ footer span#copyright {
   text-shadow: 1px 1px #3f4444;
   color: #eaebeb;
 }
-/* line 32, ../dev/sass/_video.scss */
+/* line 79, ../dev/sass/_video.scss */
 .video_tease div.black_film {
   position: absolute;
   top: 0;
@@ -8943,20 +9002,26 @@ footer span#copyright {
   -o-transition: opacity 0.25s;
   transition: opacity 0.25s;
 }
-/* line 40, ../dev/sass/_video.scss */
+/* line 87, ../dev/sass/_video.scss */
 .video_tease div.black_film:hover {
   opacity: 0.2;
 }
 
-/* line 47, ../dev/sass/_video.scss */
+/* line 94, ../dev/sass/_video.scss */
 .video_tease.featured i.play_tease {
   font-size: 72px;
+}
+@media (max-width: 500px) {
+  /* line 94, ../dev/sass/_video.scss */
+  .video_tease.featured i.play_tease {
+    font-size: 42px;
+  }
 }
 
 /* line 1, ../dev/sass/_form.scss */
 .email_signup {
-  max-width: 300px;
-  background: #585e5e;
+  width: 300px;
+  background: #707979;
   padding: 10px;
   margin: 0 auto 30px;
   -webkit-border-radius: 3px;
@@ -8971,7 +9036,13 @@ footer span#copyright {
     float: right;
   }
 }
-/* line 10, ../dev/sass/_form.scss */
+@media (max-width: 500px) {
+  /* line 1, ../dev/sass/_form.scss */
+  .email_signup {
+    width: 100%;
+  }
+}
+/* line 13, ../dev/sass/_form.scss */
 .email_signup .email_prompt {
   color: #ffd57d;
   text-align: center;
@@ -8980,50 +9051,93 @@ footer span#copyright {
   line-height: 1em;
   margin-bottom: 20px;
 }
-/* line 18, ../dev/sass/_form.scss */
+/* line 21, ../dev/sass/_form.scss */
 .email_signup img {
   margin-bottom: 20px;
 }
-/* line 22, ../dev/sass/_form.scss */
+/* line 25, ../dev/sass/_form.scss */
 .email_signup form .subscriptions {
   display: none;
 }
-/* line 25, ../dev/sass/_form.scss */
+/* line 28, ../dev/sass/_form.scss */
 .email_signup form .btn-default {
+  border-color: #715926;
   width: 100%;
   background: #ffd57d;
+  font-weight: 700;
+  font-size: 18px;
+  color: #5c5e61;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+/* line 36, ../dev/sass/_form.scss */
+.email_signup form .btn-default:hover {
+  background: #ffc54a;
+}
+/* line 41, ../dev/sass/_form.scss */
+.email_signup .email_icon {
+  font-size: 140px;
+  text-align: center;
+  color: white;
+  height: 110px;
+}
+/* line 46, ../dev/sass/_form.scss */
+.email_signup .email_icon i {
+  position: relative;
+  top: -40px;
 }
 
 /* line 2, ../dev/sass/_band_detail.scss */
-.band_page h2 {
+.band_page h2.featured_band {
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 5px;
   text-align: center;
   text-decoration: underline;
 }
-/* line 10, ../dev/sass/_band_detail.scss */
+@media (max-width: 500px) {
+  /* line 2, ../dev/sass/_band_detail.scss */
+  .band_page h2.featured_band {
+    font-size: 24px;
+  }
+}
+/* line 13, ../dev/sass/_band_detail.scss */
 .band_page .band_members h3, .band_page .setlist h3 {
   text-decoration: underline;
 }
-/* line 13, ../dev/sass/_band_detail.scss */
+/* line 16, ../dev/sass/_band_detail.scss */
 .band_page .band_members p, .band_page .setlist p {
   margin-bottom: 0;
   font-weight: 500;
+  line-height: 15px;
 }
-/* line 17, ../dev/sass/_band_detail.scss */
+/* line 21, ../dev/sass/_band_detail.scss */
 .band_page .band_members p.detail, .band_page .setlist p.detail {
   font-size: 12px;
   font-weight: 400;
   color: #75787b;
 }
-/* line 22, ../dev/sass/_band_detail.scss */
+/* line 26, ../dev/sass/_band_detail.scss */
 .band_page .band_members .band_member, .band_page .band_members .song, .band_page .setlist .band_member, .band_page .setlist .song {
   margin-bottom: 5px;
 }
-/* line 26, ../dev/sass/_band_detail.scss */
+/* line 30, ../dev/sass/_band_detail.scss */
 .band_page .setlist {
   text-align: right;
+}
+@media (max-width: 768px) {
+  /* line 30, ../dev/sass/_band_detail.scss */
+  .band_page .setlist {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  /* line 36, ../dev/sass/_band_detail.scss */
+  .band_page .band_members {
+    text-align: center;
+  }
 }
 
 /* line 12, ../dev/sass/style.scss */
@@ -9035,7 +9149,7 @@ footer span#copyright {
 
 /* line 18, ../dev/sass/style.scss */
 hr {
-  border-top: 5px solid #3f4444;
+  border-top: 5px solid #585e5e;
 }
 
 /* line 22, ../dev/sass/style.scss */
@@ -9043,107 +9157,134 @@ h1, h2, h3 {
   font-family: Molot;
 }
 
-/* line 26, ../dev/sass/style.scss */
-#underwriter {
-  margin: 0 auto 30px;
+/* line 27, ../dev/sass/style.scss */
+#underwriter div {
+  display: block;
+  margin: 0 auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   /* line 26, ../dev/sass/style.scss */
   #underwriter {
     float: right;
   }
 }
 
-/* line 33, ../dev/sass/style.scss */
+/* line 36, ../dev/sass/style.scss */
 .navbar {
   min-height: 63px;
 }
 @media (max-width: 500px) {
-  /* line 33, ../dev/sass/style.scss */
+  /* line 36, ../dev/sass/style.scss */
   .navbar {
     min-height: 45px;
   }
 }
 @media (max-width: 768px) {
-  /* line 38, ../dev/sass/style.scss */
+  /* line 41, ../dev/sass/style.scss */
   .navbar .navbar-header {
     padding: 0 15px 0;
   }
 }
-/* line 42, ../dev/sass/style.scss */
+/* line 45, ../dev/sass/style.scss */
 .navbar .navbar-header #navbar-title {
   font-size: 36px !important;
   font-family: Molot;
 }
-/* line 43, ../dev/sass/style.scss */
+/* line 46, ../dev/sass/style.scss */
 .navbar .navbar-header #navbar-title a {
   color: #faf6e8;
 }
-/* line 45, ../dev/sass/style.scss */
+/* line 48, ../dev/sass/style.scss */
 .navbar .navbar-header #navbar-title a:hover {
   color: #307fe2;
 }
 @media (max-width: 500px) {
-  /* line 42, ../dev/sass/style.scss */
+  /* line 45, ../dev/sass/style.scss */
   .navbar .navbar-header #navbar-title {
     font-size: 24px !important;
   }
 }
-/* line 54, ../dev/sass/style.scss */
+/* line 57, ../dev/sass/style.scss */
 .navbar .navbar-header #navbar-title span.live_from {
   font-family: GrandHotel Regular;
 }
 @media (max-width: 768px) {
-  /* line 42, ../dev/sass/style.scss */
+  /* line 45, ../dev/sass/style.scss */
   .navbar .navbar-header #navbar-title {
     text-align: left !important;
   }
 }
-/* line 62, ../dev/sass/style.scss */
-.navbar .navbar-header #social-logos {
+/* line 65, ../dev/sass/style.scss */
+.navbar .navbar-header .social_logos {
   top: 8px !important;
 }
 @media (max-width: 500px) {
-  /* line 62, ../dev/sass/style.scss */
-  .navbar .navbar-header #social-logos {
-    top: 0 !important;
+  /* line 65, ../dev/sass/style.scss */
+  .navbar .navbar-header .social_logos {
+    top: -2px !important;
   }
 }
 @media (max-width: 500px) {
-  /* line 68, ../dev/sass/style.scss */
-  .navbar .navbar-header #social-logos li i.icon {
+  /* line 71, ../dev/sass/style.scss */
+  .navbar .navbar-header .social_logos li i.icon {
     font-size: 24px !important;
   }
 }
-/* line 76, ../dev/sass/style.scss */
+/* line 79, ../dev/sass/style.scss */
 .navbar .navbar-header #vpr_logo {
   top: 8px !important;
 }
 @media (max-width: 768px) {
-  /* line 76, ../dev/sass/style.scss */
+  /* line 79, ../dev/sass/style.scss */
   .navbar .navbar-header #vpr_logo {
     display: none;
   }
 }
 
-/* line 85, ../dev/sass/style.scss */
+/* line 88, ../dev/sass/style.scss */
 .preview {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
-/* line 87, ../dev/sass/style.scss */
+/* line 90, ../dev/sass/style.scss */
 .preview h3.preview_bandname {
   margin-top: 10px;
 }
 
-/* line 92, ../dev/sass/style.scss */
-.email_icon {
-  font-size: 120px;
-  text-align: center;
-  color: white;
-  line-height: 100px;
+/* line 95, ../dev/sass/style.scss */
+.this_month {
+  font-weight: 600;
+  color: #75787b;
+  margin: 20px 0 0;
+  line-height: 12px;
+  font-size: 12px;
+}
+@media (max-width: 500px) {
+  /* line 95, ../dev/sass/style.scss */
+  .this_month {
+    margin-top: 5px;
+  }
 }
 
-/* line 99, ../dev/sass/style.scss */
-.email_signup {
-  min-width: 300px;
+/* line 107, ../dev/sass/style.scss */
+.landing .featured_band {
+  margin-top: 0;
+}
+
+/* line 112, ../dev/sass/style.scss */
+.bandname {
+  color: #262a2a;
+}
+/* line 114, ../dev/sass/style.scss */
+.bandname:hover {
+  color: #307fe2;
+  text-decoration: none;
+}
+
+/* line 120, ../dev/sass/style.scss */
+.about {
+  margin-bottom: 30px;
+}
+/* line 122, ../dev/sass/style.scss */
+.about p {
+  font-size: 18px;
 }

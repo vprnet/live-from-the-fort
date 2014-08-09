@@ -9,7 +9,7 @@
 
     <!-- Styles -->
 {% block style %}
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}?ver=0.1" rel="stylesheet">
 {% endblock %}
 
 
@@ -50,14 +50,16 @@
 {% block scripts %}
 {% endblock %}
 
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.min.js') }}?ver=0.1"></script>
 
+{#
 {% block grunt %}
 <script src="//localhost:35729/livereload.js"></script>
 <script type='text/javascript'>//<![CDATA[
 ;document.write("<script defer src='//HOST:3000/socket.io/socket.io.js'><\/script><script defer src='//HOST:3001/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));
 //]]></script>
 {% endblock %}
+#}
 
 
 </body>

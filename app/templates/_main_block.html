@@ -1,30 +1,72 @@
 {% for band in bands %}
     {% if loop.first %}
-        <div class="video_wrapper">
-        {% if not landing %}
-            <iframe class="band_video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-        {% endif %}
-            <div class="featured video_tease">
-                {% include "_video_tease.html" %}
+        <div class="featured_band">
+            <div class="video_wrapper">
+                <div class="black_box">
+                </div>
+            {% if not landing %}
+                <iframe class="band_video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
+                <div class="featured video_tease">
+                    {% include "_video_tease.html" %}
+                </div>
             </div>
+            <div class="below_video">
+                <p class="extras"><a href="{{ band.audiofile }}" alt="MP3 of {{ band.bandname }}'s performance" download>Download Audio</a> | <a href="{{ band.bandwebsite }}" alt="{{ band.bandname }}'s website">Band Website</a></p>
+                <ul class="list-inline social_logos">
+                    <li class="share_this">Share:</li>
+                    <li><a href="https://www.facebook.com/sharer.php?u={{ page_url|urlencode }}" target="_blank"><i class="icon ion-social-facebook"></i></a></li>
+                    <li><a href="http://www.twitter.com/intent/tweet?url={{ page_url|urlencode }}&text={{ social.twitter_text|urlencode }}&via=vprnet&hashtags={{ social.twitter_hashtag|urlencode }}" target="_blank"><i class="icon ion-social-twitter"></i></a></li>
+                    <li><a href="https://plus.google.com/share?url={{ page_url|urlencode }}" target="_blank"><i class="icon ion-social-googleplus"></i></a></li>
+                </ul>
+            </div>
+            {% if landing %}
+                <p class="this_month">THIS MONTH'S VIDEO</p>
+            {% endif %}
+            <h2 class="featured_band">
+                {% if landing %}<a class="bandname" href="{{ url_for('band_page', bandname=band.bandname )}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a>
+                {% else %}
+                {{ band.bandname }}
+                {% endif %}
+            </h2>
+            {% if not landing %}
+                {% include "_band_detail.html" %}
+            {% endif %}
+            <hr>
         </div>
-        <h2>{{ band.bandname }}</h2>
-        {% if not landing %}
-            {% include "_band_detail.html" %}
-        {% endif %}
-        <hr>
     {% else %}
         {% if loop.index is divisibleby 2 %}
+        <h2>Coming Soon</h2>
         <div class="row">
         {% endif %}
             <div class="preview col-sm-6">
                 <div class="video_tease">
                     {% include "_video_tease.html" %}
                 </div>
+                {% if band.youtubelink %}
+                <h3 class="preview_bandname"><a class="bandname" href="{{ url_for('band_page', bandname=band.bandname )}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
+                {% else %}
                 <h3 class="preview_bandname">{{ band.bandname }}</h3>
+                {% endif %}
+                <hr class="visible-xs">
             </div>
         {% if loop.index0 is divisibleby 2 %}
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <hr class="hidden-xs">
+            </div>
+            <div class="col-sm-6">
+                <hr class="hidden-xs">
+            </div>
         </div>
         {% endif %}
     {% endif %}
 {% endfor %}
+{% if landing %}
+<div class="about">
+    <h2>About The Project</h2>
+    <p>Live From The Fort is an online video music series by Vermont Public Radio. The intimate performances, recorded at VPR studios in Colchester's historic Fort Ethan Allen, provide an opportunity to discover and explore the rich and diverse contemporary music scene Vermont.</p>
+    <p>The series seeks musicians from throughout the state working in a variety of musical genres. Through the music and casual conversation, the series connects music lovers with music makers in Vermont.</p>
+</div>
+{% endif %}
