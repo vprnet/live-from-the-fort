@@ -21,10 +21,11 @@
                 </ul>
             </div>
             {% if landing %}
-                <p class="this_month">THIS MONTH'S VIDEO</p>
+                <p class="this_month">LATEST VIDEO</p>
             {% endif %}
             <h2 class="featured_band">
-                {% if landing %}<a class="bandname" href="{{ url_for('band_page', bandname=band.bandname )}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a>
+                {% if landing %}<a class="bandname" href="{{
+                  url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a>
                 {% else %}
                 {{ band.bandname }}
                 {% endif %}
@@ -41,7 +42,8 @@
                     {% include "_video_tease.html" %}
                 </div>
                 {% if band.youtubelink %}
-                <h3 class="preview_bandname"><a class="bandname" href="{{ url_for('band_page', bandname=band.bandname )}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
+                <h3 class="preview_bandname"><a class="bandname" href="{{
+                    url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
                 {% else %}
                 <h3 class="preview_bandname">{{ band.bandname }}</h3>
                 {% endif %}
@@ -58,7 +60,8 @@
                     {% include "_video_tease.html" %}
                 </div>
                 {% if band.youtubelink %}
-                <h3 class="preview_bandname"><a class="bandname" href="{{ url_for('band_page', bandname=band.bandname )}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
+                <h3 class="preview_bandname"><a class="bandname" href="{{
+                    url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
                 {% else %}
                 <h3 class="preview_bandname">{{ band.bandname }}</h3>
                 {% endif %}
