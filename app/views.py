@@ -11,7 +11,7 @@ project_social = {
     'subtitle': "",
     'img': bands[0]['coverphoto'],
     'description': "'Live From The Fort' is an online video music series by Vermont Public Radio. The intimate performances, recorded at VPR studios in Colchester's historic Fort Ethan Allen, provide an opportunity to discover and explore the rich and diverse contemporary music scene Vermont.",
-    'twitter_text': "Intimate performances by Vermont's own music makers.",
+    'twitter_text': "Intimate performances by your favorite Vermont artists, performed live at VPR studios",
     'twitter_hashtag': "LiveFromTheFort"
 }
 

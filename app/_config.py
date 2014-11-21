@@ -22,7 +22,7 @@ STATIC_EXPIRES = 60 * 24 * 3600
 HTML_EXPIRES = 3600
 
 # Upload Settings (ignores anything included below)
-IGNORE_DIRECTORIES = ['.git', 'venv', 'sass', 'templates', 'gimp']
+IGNORE_DIRECTORIES = ['.git', 'venv', 'sass', 'templates', 'gimp', 'node_modules']
 IGNORE_FILES = ['.DS_Store']
 IGNORE_FILE_TYPES = ['.gz', '.pyc', '.py', '.rb', '.md']
 
