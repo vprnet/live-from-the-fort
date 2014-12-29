@@ -35,22 +35,39 @@
             {% endif %}
             <hr>
         </div>
-    {% elif loop.last   %}
-        <div class="row">
-            <div class="preview col-sm-6">
-                <div class="video_tease">
-                    {% include "_video_tease.html" %}
+    {% elif loop.last %}
+        {% if loop.index % 2 == 0 %}
+            <div class="row">
+                <div class="preview col-sm-6">
+                    <div class="video_tease">
+                        {% include "_video_tease.html" %}
+                    </div>
+                    {% if band.youtubelink %}
+                    <h3 class="preview_bandname"><a class="bandname" href="{{
+                        url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
+                    {% else %}
+                    <h3 class="preview_bandname">{{ band.bandname }}</h3>
+                    {% endif %}
+                    <hr class="visible-xs">
+                    <hr class="hidden-xs">
                 </div>
-                {% if band.youtubelink %}
-                <h3 class="preview_bandname"><a class="bandname" href="{{
-                    url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
-                {% else %}
-                <h3 class="preview_bandname">{{ band.bandname }}</h3>
-                {% endif %}
-                <hr class="visible-xs">
-                <hr class="hidden-xs">
             </div>
-        </div>
+        {% else %}
+              <div class="preview col-sm-6">
+                  <div class="video_tease">
+                      {% include "_video_tease.html" %}
+                  </div>
+                  {% if band.youtubelink %}
+                  <h3 class="preview_bandname"><a class="bandname" href="{{
+                      url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
+                  {% else %}
+                  <h3 class="preview_bandname">{{ band.bandname }}</h3>
+                  {% endif %}
+                  <hr class="visible-xs">
+                  <hr class="hidden-xs">
+              </div>
+          </div>
+        {% endif %}
     {% else %}
         {% if loop.index % 2 == 0 %}
         <div class="row">
