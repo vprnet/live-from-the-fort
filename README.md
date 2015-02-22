@@ -1,9 +1,26 @@
 #Live From The Fort
+
 A VPR music video series, similar to NPR's [Tiny Desk Concerts](http://www.npr.org/series/tiny-desk-concerts/)
 
-This project uses the [VPR App Template](https://github.com/vprnet/app-template)
+## Releasing Updates
+
+The steps to get setup locally and release new versions when the spreadsheet is
+updated. These are commands that should be run from the command line.
+
+1. Clone the repository locally - `git@github.com:vprnet/live-from-the-fort.git`
+1. Ensure you have Python 2.7 installed
+1. [Install `pip`](https://pip.pypa.io/en/latest/installing.html)
+1. Install virtualenv - `pip install virtualenv`
+1. Change into the project directory - `cd live-from-the-fort`
+1. Create a virtual environment for the app - `virtualenv venv`
+1. Enter the virtual environment - `source venv/bin/activate`
+1. Install the app requirements - `pip install -r requirements.txt`
+1. Copy the config file - `cp app/_config.py app/config.py`
+1. Configure the values in `app/config.py`
+1. Upload the app to AWS S3 - `python app/index.py build`
 
 ## Author
+
 [Matt Parrilla](http://twitter.com/mattparrilla)
 
 ##Copyright and License
