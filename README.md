@@ -4,7 +4,7 @@ A VPR music video series, similar to NPR's [Tiny Desk Concerts](http://www.npr.o
 
 ## Releasing Updates
 
-The steps to get setup locally and release new versions when the spreadsheet is
+The steps to get set up locally and release new versions when the spreadsheet is
 updated. These are commands that should be run from the command line.
 
 1. Clone the repository locally - `git@github.com:vprnet/live-from-the-fort.git`
@@ -35,4 +35,3 @@ http://www.apache.org/licenses/LICENSE-2.0
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions under the License.
-
