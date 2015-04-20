@@ -23,8 +23,6 @@ updated. These are commands that should be run from the command line.
 
 Remove 'build' argument from last step, so:	`python app/index.py`
 
-
-
 ## Author
 
 [Matt Parrilla](http://twitter.com/mattparrilla)
