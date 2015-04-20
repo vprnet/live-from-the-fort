@@ -15,6 +15,7 @@ NPR_API_KEY = ''
 
 GOOGLE_SPREADSHEET = {'USER': '',
     'PASSWORD': '',
+    'KEY': '',
     'SOURCE': ''}
 
 # Cache Settings (units in seconds)

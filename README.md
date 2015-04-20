@@ -19,6 +19,10 @@ updated. These are commands that should be run from the command line.
 1. Configure the values in `app/config.py`
 1. Upload the app to AWS S3 - `python app/index.py build`
 
+###To Run Locally
+
+Remove 'build' argument from last step, so:	`python app/index.py`
+
 ## Author
 
 [Matt Parrilla](http://twitter.com/mattparrilla)
