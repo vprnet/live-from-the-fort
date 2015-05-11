@@ -14,7 +14,6 @@ def list_sheets():
     for sheet in spreadsheets:
         print sheet
 
-
 def get_google_sheet(sheet_key=False, sheet_id='od6'):
     """Uses python_google_spreadsheet API to interact with sheet"""
     api = SpreadsheetAPI(GOOGLE_SPREADSHEET['USER'],
@@ -32,6 +31,7 @@ def get_bands():
     band_list = []
     for i, band in enumerate(sheet):
         if band['youtubelink']:
+	    print band['youtubelink']
             band['youtubelink'] = '%sembed/%s?rel=0&start=0' % tuple(
                 band['youtubelink'].rsplit('watch?v='))
             band['slug'] = slugify(band['bandname'])
