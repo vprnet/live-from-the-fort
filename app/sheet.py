@@ -10,4 +10,4 @@ def get_google_sheet():
     spreadsheet = authorization.open("Live From The Fort")
     worksheet = spreadsheet.get_worksheet(0)
 
-    return worksheet.get_all_values()
+    return worksheet.get_all_records()

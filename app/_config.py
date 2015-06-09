@@ -9,7 +9,7 @@ FREEZER_IGNORE_MIMETYPE_WARNINGS = True
 AWS_KEY = ''
 AWS_SECRET_KEY = ''
 AWS_BUCKET = 'www.vpr.net'
-AWS_DIRECTORY = 'sandbox/fort'
+AWS_DIRECTORY = 'apps/live-from-the-fort'
 
 NPR_API_KEY = ''
 
