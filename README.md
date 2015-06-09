@@ -19,13 +19,24 @@ updated. These are commands that should be run from the command line.
 1. Configure the values in `app/config.py`
 1. Upload the app to AWS S3 - `python app/index.py build`
 
-###To Run Locally
+### To Run Locally
 
 Remove 'build' argument from last step, so:	`python app/index.py`
 
-## Author
+## Notes on Interacting with Google Spreadsheets
 
-[Matt Parrilla](http://twitter.com/mattparrilla)
+In May 2015, Google stopped supporting the Google Spreadsheets API, which Live From the Fort used to connect a spreadsheet to the page. We found a good replacement in [gspread](https://github.com/burnash/gspread). Here are a few things to know about our new implementation:
+
+1. To start a new project, head to the [Google Developer's Console](https://console.developers.google.com/project).
+1. Click `create project`.
+1. Under `APIs`, enable the Google Drive API.
+1. In `Credentials` under `OAuth`, create a new Client ID.
+1. Select `Service Account`. You'll see a json file incoming with a private_key_id, private_key, client_email, client_id, and type.
+1. Save the json file in your project. Be a good person and add it to your gitignore, too.
+1. The json file is what gets loaded and opened in sheet.py. Make sure the names match!
+1. Finally, *share your google spreadsheet* with the email provided in client_email.
+1. You'll also need to `pip install gspread` and `pip install oauth2client`.
+
 
 ##Copyright and License
 
