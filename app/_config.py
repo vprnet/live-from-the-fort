@@ -9,9 +9,7 @@ FREEZER_IGNORE_MIMETYPE_WARNINGS = True
 AWS_KEY = ''
 AWS_SECRET_KEY = ''
 AWS_BUCKET = 'www.vpr.net'
-AWS_DIRECTORY = 'apps/live-from-the-fort'
-
-NPR_API_KEY = ''
+AWS_DIRECTORY = 'sandbox/fort'
 
 # Cache Settings (units in seconds)
 STATIC_EXPIRES = 60 * 24 * 3600
