@@ -37,6 +37,10 @@ In May 2015, Google stopped supporting the Google Spreadsheets API, which Live F
 1. Finally, *share your google spreadsheet* with the email provided in client_email.
 1. You'll also need to `pip install gspread` and `pip install oauth2client`.
 
+## FOR VUHAUS:
+
+1. Replace old YouTube links with the URL of the video that you can get from the embed code that YouTube provides.
+1. VuHaus video should be the URL from the embed code that VuHaus provides.
 
 ##Copyright and License
 
