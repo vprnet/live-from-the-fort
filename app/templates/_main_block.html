@@ -42,7 +42,7 @@
                     <div class="video_tease">
                         {% include "_video_tease.html" %}
                     </div>
-                    {% if band.youtubelink %}
+                    {% if band.video %}
                     <h3 class="preview_bandname"><a class="bandname" href="{{
                         url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
                     {% else %}
@@ -57,7 +57,7 @@
                   <div class="video_tease">
                       {% include "_video_tease.html" %}
                   </div>
-                  {% if band.youtubelink %}
+                  {% if band.video %}
                   <h3 class="preview_bandname"><a class="bandname" href="{{
                       url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
                   {% else %}
@@ -76,7 +76,7 @@
                 <div class="video_tease">
                     {% include "_video_tease.html" %}
                 </div>
-                {% if band.youtubelink %}
+                {% if band.video %}
                 <h3 class="preview_bandname"><a class="bandname" href="{{
                     url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
                 {% else %}

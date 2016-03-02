@@ -6,9 +6,7 @@ def get_bands():
     sheet = get_google_sheet()
     band_list = []
     for i, band in enumerate(sheet):
-        if band['youtubelink']:
-            band['youtubelink'] = '%sembed/%s?rel=0&start=0' % tuple(
-                band['youtubelink'].rsplit('watch?v='))
+        if band['video']:
             band['slug'] = slugify(band['bandname'])
             band['bandmembers'] = [member for member in band['bandmembers'].split(';')
                 if member]
