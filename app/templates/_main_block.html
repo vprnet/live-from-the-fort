@@ -42,7 +42,7 @@
                     <div class="video_tease">
                         {% include "_video_tease.html" %}
                     </div>
-                    {% if band.youtubelink %}
+                    {% if band.video %}
                     <h3 class="preview_bandname"><a class="bandname" href="{{
                         url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
                     {% else %}
@@ -57,7 +57,7 @@
                   <div class="video_tease">
                       {% include "_video_tease.html" %}
                   </div>
-                  {% if band.youtubelink %}
+                  {% if band.video %}
                   <h3 class="preview_bandname"><a class="bandname" href="{{
                       url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
                   {% else %}
@@ -76,7 +76,7 @@
                 <div class="video_tease">
                     {% include "_video_tease.html" %}
                 </div>
-                {% if band.youtubelink %}
+                {% if band.video %}
                 <h3 class="preview_bandname"><a class="bandname" href="{{
                     url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
                 {% else %}
@@ -93,6 +93,11 @@
 {% if landing %}
 <div class="row">
   <div class="col-sm-12 about">
+    <h2>VuHaus Song of the Day</h2>
+    <p><style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'>  <iframe width='560' height='315' src='http://www.vuhaus.com/embed/v2/songoftheday' frameborder='0' allowfullscreen></iframe></div></p>
+  </div>
+  <div class="col-sm-12 about">
+    <hr>
         <h2>About The Project</h2>
         <p><em>Live From The Fort</em> is a music video series by Vermont
     Public Radio. The intimate performances, recorded at VPR studios in
