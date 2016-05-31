@@ -35,6 +35,11 @@
             {% endif %}
             <hr>
         </div>
+
+        {% if landing %}
+            {% include "_vuhaus.html" %}
+        {% endif %}
+
     {% elif loop.last %}
         {% if loop.index % 2 == 0 %}
             <div class="row">
@@ -93,7 +98,6 @@
 
 {% if landing %}
   <div class="row">
-    {% include "_vuhaus.html" %}
     {% include "_about.html" %}
   </div>
 {% endif %}
