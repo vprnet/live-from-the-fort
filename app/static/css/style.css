@@ -1506,7 +1506,7 @@ hr {
 
 hr.side {
   border: solid #a5a5a5;
-  border-width: 2px 0 0; 
+  border-width: 2px 0 0;
   clear: both;
   margin: 22px 0 21px;
   height: 0;"
@@ -9262,7 +9262,6 @@ h1, h2, h3 {
 .this_month {
   font-weight: 600;
   color: #75787b;
-  margin: 20px 0 0;
   line-height: 12px;
   font-size: 12px;
 }
