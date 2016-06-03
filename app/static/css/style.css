@@ -1498,10 +1498,18 @@ img {
 
 /* line 954, ../dev/sass/_bootstrap.scss */
 hr {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eeeeee;
+}
+
+hr.side {
+  border: solid #a5a5a5;
+  border-width: 2px 0 0; 
+  clear: both;
+  margin: 22px 0 21px;
+  height: 0;"
 }
 
 /* line 960, ../dev/sass/_bootstrap.scss */
@@ -8896,7 +8904,7 @@ footer span#copyright {
 /* line 1, ../dev/sass/_video.scss */
 .video_wrapper {
   position: relative;
-  padding-bottom: 53.25%;
+  padding-bottom: 58.25%;
   padding-top: 25px;
   height: 0;
 }
