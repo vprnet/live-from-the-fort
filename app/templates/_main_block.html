@@ -25,7 +25,7 @@
         </div>
 
           <div class="below_video">
-              <p class="extras"><a href="{{ band.audiofile }}" alt="MP3 of {{ band.bandname }}'s performance" download>Download Audio</a> | <a href="{{ band.bandwebsite }}" alt="{{ band.bandname }}'s website" target="_blank">Band Website</a></p>
+              <p class="extras"><a href="{{ band.audiofile }}" alt="MP3 of {{ band.bandname }}'s performance" download>Download Audio</a> | <a href="{{ band.bandwebsite }}" alt="{{ band.bandname }}'s website" target="_blank">Website</a></p>
               <ul class="list-inline social_logos">
                   <li class="share_this">Share:</li>
                   <li><a href="https://www.facebook.com/sharer.php?u={{ page_url|urlencode }}" target="_blank"><i class="icon ion-social-facebook"></i></a></li>
@@ -68,7 +68,6 @@
                     {% else %}
                     <h3 class="preview_bandname">{{ band.bandname }}</h3>
                     {% endif %}
-                    <hr class="side">
                     <hr class="side">
                 </div>
             </div>

@@ -1,26 +1,140 @@
+{% if band.slug == "waking-windows-showcase" %}
 <div class="band_detail">
-    <div class="row">
-        <div class="col-sm-6 setlist">
-            <h3>The Set List</h3>
-            {% for song in band.setlist %}
-                <div class="song">
-                    <p>{{ song }}</p>
-                    {% if loop.index is divisibleby 2 %}
-                    <p class="detail"><i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i></p>
-                    {% else %}
-                    <p class="detail"><i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i></p>
-                    {% endif %}
-                </div>
-            {% endfor %}
-        </div>
-        <div class="col-sm-6 band_members">
-            <h3>The Band</h3>
-            {% for member in band.bandmembers %}
-                <div class="band_member">
-                    <p class="member_name">{{ member.name }}</p>
-                    <p class="detail">{{ member.instrument }}</p>
-                </div>
-            {% endfor %}
-        </div>
+  <div class="row">
+
+
+    <h2 class="featured_band"><a class="bandname" href="https://violetteultraviolet.bandcamp.com/" alt="Violet Ultraviolet" target="_blank">Violent Ultraviolet</a></h2>
+    <div class="col-sm-6 setlist">
+      <h3>The Set List</h3>
+      <div class="song">
+        <p>Stroke of Good Fortune</p>
+        <p class="detail"><i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i></p>
+        <p>Pop City</p>
+        <p class="detail"><i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i></p>
+      </div>
     </div>
+
+    <div class="col-sm-6 band_members">
+      <h3>The Band</h3>
+      <div class="band_member">
+        <p class="member_name">Jake Brennan</p>
+        <p class="detail">Vocals, Guitar</p>
+        <p class="member_name">Rob Voland</p>
+        <p class="detail">Bass</p>
+        <p class="member_name">Ron Rost</p>
+        <p class="detail">Keyboard</p>
+        <p class="member_name">Brian Hanf</p>
+        <p class="detail">Drums</p>
+        <p class="member_name">Wren Kitz</p>
+        <p class="detail">Vocals, Guitar</p>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+<div class="band_detail">
+  <div class="row">
+    <hr class="side">
+  </div>
+</div>
+
+
+<div class="band_detail">
+  <div class="row">
+
+    <h2 class="featured_band"><a class="bandname" href="http://www.smittens.com/" alt="The Smittens" target="_blank">The Smittens</a></h2>
+    <div class="col-sm-6 setlist">
+
+      <h3>The Set List</h3>
+      <div class="song">
+        <p>We're Gonna Fall</p>
+        <p class="detail"><i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i></p>
+        <p>Upper West Side</p>
+        <p class="detail"><i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i></p>
+      </div>
+    </div>
+
+    <div class="col-sm-6 band_members">
+      <h3>The Band</h3>
+      <div class="band_member">
+        <p class="member_name">Max Andrucki</p>
+        <p class="detail">Vocals, Tambourine and Keys</p>
+        <p class="member_name">Missy Bly</p>
+        <p class="detail">Vocals, Shakers and Guitar</p>
+        <p class="member_name">Colin Clary</p>
+        <p class="detail">Vocals and Guitar</p>
+        <p class="member_name">Holly Chagnon</p>
+        <p class="detail">Drums</p>
+        <p class="member_name">Dana Kaplan</p>
+        <p class="detail">Vocals, Keys and Guitar</p>
+        <p class="member_name">David Zacharis</p>
+        <p class="detail">Bass</p>
+      </div>
+    </div>
+
+    <div class="band_detail">
+      <div class="row">
+        <hr class="side">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <div class="band_detail">
+      <div class="row">
+
+        <h2 class="featured_band"><a class="bandname" href="https://enemyself.bandcamp.com/" alt="Enemy Self" target="_blank">Enemy Self</a></h2>
+        <div class="col-sm-6 setlist">
+
+          <h3>The Set List</h3>
+          <div class="song">
+            <p>The Future</p>
+            <p class="detail"><i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i></p>
+            <p>The Mirror</p>
+            <p class="detail"><i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i></p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 band_members">
+          <h3>The Band</h3>
+          <div class="band_member">
+            <p class="member_name">Michael Morelli</p>
+            <p class="detail">Vocals and Musical Production</p>
+            <p class="member_name">Michael Plante</p>
+            <p class="detail">Turntables</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% else %}
+  <div class="band_detail">
+    <div class="row">
+      <div class="col-sm-6 setlist">
+        <h3>The Set List</h3>
+        {% for song in band.setlist %}
+        <div class="song">
+          <p>{{ song }}</p>
+          {% if loop.index is divisibleby 2 %}
+          <p class="detail"><i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i></p>
+          {% else %}
+          <p class="detail"><i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i> <i class="icon ion-ios7-musical-note"></i> <i class="icon ion-ios7-musical-notes"></i></p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-sm-6 band_members">
+        <h3>The Band</h3>
+        {% for member in band.bandmembers %}
+        <div class="band_member">
+          <p class="member_name">{{ member.name }}</p>
+          <p class="detail">{{ member.instrument }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}

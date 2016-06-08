@@ -47,9 +47,9 @@ def band_page(bandname):
         'title': page_title,
         'subtitle': "Recorded at VPR Studios",
         'img': bands[0]['coverphoto'],
-        'description': "In this month's installment of 'Live From The Fort' " +
-        bands[0]['bandname'] + ' performs at historic Fort Ethan Allen',
-        'twitter_text': bands[0]['bandname'] + " performs at VPR Studios",
+        'description': "In this month's installment of 'Live From The Fort': " +
+        bands[0]['bandname'],
+        'twitter_text': bands[0]['bandname'],
         'twitter_hashtag': "LiveFromTheFort"
     }
 
