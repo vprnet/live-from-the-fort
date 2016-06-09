@@ -1464,7 +1464,6 @@ img {
 
 /* line 928, ../dev/sass/_bootstrap.scss */
 .img-responsive {
-  display: block;
   width: 100% \9;
   max-width: 100%;
   height: auto;
