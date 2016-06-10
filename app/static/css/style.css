@@ -1590,7 +1590,7 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -5614,6 +5614,10 @@ footer span#copyright {
   text-align: center;
   color: #8f9294;
 }
+/* line 89, ../dev/sass/_vpr.scss */
+#underwriter h3 {
+  text-align: center;
+}
 /* line 95, ../dev/sass/_vpr.scss */
 #underwriter p li {
   display: inline;
@@ -9030,7 +9034,7 @@ footer span#copyright {
   width: 300px;
   background: #707979;
   padding: 10px;
-  margin: 0 auto 30px;
+  margin: 0 auto 10px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
