@@ -1,63 +1,32 @@
-{% for band in bands %}
-    {% if loop.first %}
-
-      {% if landing %}
-          <p class="this_month">LATEST VIDEO</p>
-      {% endif %}
-
-      <h2 class="featured_band">
-        {% if landing %}
-          <a class="bandname" href="{{url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a>
-        {% else %}
-          {{ band.bandname }}
-        {% endif %}
-      </h2>
-
-      <div class="featured_band">
-
-        <div class="video_wrapper">
-          {% if not landing %}
-              <iframe class="band_video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+<div class="col-md-8">
+  {% for band in bands %}
+      {% if loop.first %}
+          {% if landing %}
+              <p class="this_month">LIVE FROM THE FORT</p>
           {% endif %}
-          <div class="featured video_tease">
-            {% include "_video_tease.html" %}
-          </div>
-        </div>
-
-          <div class="below_video">
-              <p class="extras"><a href="{{ band.audiofile }}" alt="MP3 of {{ band.bandname }}'s performance" download>Download Audio</a> | <a href="{{ band.bandwebsite }}" alt="{{ band.bandname }}'s website" target="_blank">Website</a></p>
-              <ul class="list-inline social_logos">
-                  <li class="share_this">Share:</li>
-                  <li><a href="https://www.facebook.com/sharer.php?u={{ page_url|urlencode }}" target="_blank"><i class="icon ion-social-facebook"></i></a></li>
-                  <li><a href="http://www.twitter.com/intent/tweet?url={{ page_url|urlencode }}&text={{ social.twitter_text|urlencode }}&via=vprnet&hashtags={{ social.twitter_hashtag|urlencode }}" target="_blank"><i class="icon ion-social-twitter"></i></a></li>
-                  <li><a href="https://plus.google.com/share?url={{ page_url|urlencode }}" target="_blank"><i class="icon ion-social-googleplus"></i></a></li>
-              </ul>
-          </div>
-
-          {% if not landing %}
-            {% include "_band_detail.html" %}
-          {% endif %}
-          <hr>
-        </div>
-
-        {% if landing %}
-            {% include "_vuhaus.html" %}
-        {% endif %}
-
-
-        {% if landing %}
-            <p class="this_month">LIVE FROM THE FORT</p>
-        {% endif %}
-        <h2 class="featured_band">
-            {% if landing %}
-              Artists
-              <hr class="side">
-            {% endif %}
-        </h2>
-
-    {% elif loop.last %}
-        {% if loop.index % 2 == 0 %}
-            <div class="row">
+          <h2 class="featured_band">
+              {% if landing %}
+                Artists
+                <hr class="side">
+              {% endif %}
+          </h2>
+      {% elif loop.last %}
+          {% if loop.index % 2 == 0 %}
+              <div class="row">
+                  <div class="preview col-sm-6">
+                      <div class="video_tease">
+                          {% include "_video_tease.html" %}
+                      </div>
+                      {% if band.video %}
+                      <h3 class="preview_bandname"><a class="bandname" href="{{
+                          url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
+                      {% else %}
+                      <h3 class="preview_bandname">{{ band.bandname }}</h3>
+                      {% endif %}
+                      <hr class="side">
+                  </div>
+              </div>
+          {% else %}
                 <div class="preview col-sm-6">
                     <div class="video_tease">
                         {% include "_video_tease.html" %}
@@ -71,7 +40,11 @@
                     <hr class="side">
                 </div>
             </div>
-        {% else %}
+          {% endif %}
+      {% else %}
+          {% if loop.index % 2 == 0 %}
+          <div class="row">
+          {% endif %}
               <div class="preview col-sm-6">
                   <div class="video_tease">
                       {% include "_video_tease.html" %}
@@ -84,26 +57,9 @@
                   {% endif %}
                   <hr class="side">
               </div>
+          {% if loop.index % 2 != 0 %}
           </div>
-        {% endif %}
-    {% else %}
-        {% if loop.index % 2 == 0 %}
-        <div class="row">
-        {% endif %}
-            <div class="preview col-sm-6">
-                <div class="video_tease">
-                    {% include "_video_tease.html" %}
-                </div>
-                {% if band.video %}
-                <h3 class="preview_bandname"><a class="bandname" href="{{
-                    url_for('band_page', bandname=band.slug)}}" alt="{{ band.bandname }}'s performance">{{ band.bandname }}</a></h3>
-                {% else %}
-                <h3 class="preview_bandname">{{ band.bandname }}</h3>
-                {% endif %}
-                <hr class="side">
-            </div>
-        {% if loop.index % 2 != 0 %}
-        </div>
-        {% endif %}
-    {% endif %}
-{% endfor %}
+          {% endif %}
+      {% endif %}
+  {% endfor %}
+</div>
