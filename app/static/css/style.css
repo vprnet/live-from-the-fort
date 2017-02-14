@@ -5618,7 +5618,8 @@ footer span#copyright {
 #lead-underwriter {
   font-size: 12px;
   padding-left: 0;
-  margin-top: 65px;
+  margin-top: 15px;
+  margin-bottom: 20px;
   text-align: center;
   color: #8f9294;
 }
@@ -5627,7 +5628,8 @@ footer span#copyright {
 #final-underwriter {
   font-size: 12px;
   padding-left: 0;
-  margin-top: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
   color: #8f9294;
 }
@@ -9063,7 +9065,7 @@ footer span#copyright {
 @media (max-width: 500px) {
   /* line 1, ../dev/sass/_form.scss */
   .email_signup {
-    width: 100%;
+    width: 70%;
   }
 }
 /* line 13, ../dev/sass/_form.scss */
@@ -9190,6 +9192,8 @@ h1, h2, h3 {
   /* line 26, ../dev/sass/style.scss */
   #lead-underwriter {
     float: right;
+    margin-top: 65px;
+
 
     /* line 89, ../dev/sass/_vpr.scss */
     #lead-underwriter {
@@ -9208,11 +9212,11 @@ h1, h2, h3 {
   /* line 26, ../dev/sass/style.scss */
   #final-underwriter {
     float: right;
+    margin-top: 100px;
 
     /* line 89, ../dev/sass/_vpr.scss */
     #final-underwriter {
       font-size: 12px;
-      margin-top: 185px;
     }
 
   }
