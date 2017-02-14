@@ -5,13 +5,15 @@
 {% block content %}
 <div class="container {% if landing %}landing{% else %}band_page{% endif %}">
     <div class="row">
-        <div class="col-md-8">
-            {% include "_main_block.html" %}
-            {% include "_about.html" %}
-        </div>
-        <div class="col-md-4">
-            {% include "_sidebar.html" %}
-        </div>
+        {% include "_latest_video.html" %}
+        {% include "_underwriter1.html" %}
+        {% include "_subscribe.html" %}
+        {% include "_vuhaus.html" %}
+        {% include "_underwriter2.html" %}
+        {% include "_main_block.html" %}
+        {% include "_underwriter3.html" %}
+        {% include "_about.html" %}
+        {% include "_email_form.html" %}
     </div>
 </div>
 

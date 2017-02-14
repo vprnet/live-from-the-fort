@@ -1,8 +1,12 @@
-<p class="this_month">VUHAUS</p>
-<h2 class="featured_band">
-  <a class="bandname" href="http://www.vuhaus.com/" alt="Song Of The Day">Song Of The Day</a>
-</h2>
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe width='560' height='315' src='https://www.vuhaus.com/embed/v2/songoftheday?autostart=false' frameborder='0' allowfullscreen></iframe></div>
-<p>Partnered with <em>Live From The Fort</em>, <a href="#about">VuHaus</a> is a non-profit digital video service that introduces emerging and established artists to new audiences around the world.</p>
-<a class="name" href="https://itunes.apple.com/us/app/vuhaus-come-in.-see-the-music./id984534957?mt=8" alt="iTunes" target="_blank"><img class="badge-responsive" src="static/img/App-store-badge-01-01.png" width="100" height="50"></a>
-<hr>
+{% if landing %}
+  <div class="col-md-8">
+    <p class="this_month">VUHAUS</p>
+    <h2 class="featured_band">
+      <a class="bandname" href="http://www.vuhaus.com/" alt="Song Of The Day">Song Of The Day</a>
+    </h2>
+    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe width='560' height='315' src='https://www.vuhaus.com/embed/v2/songoftheday?autostart=false' frameborder='0' allowfullscreen></iframe></div>
+    <p>Partnered with <em>Live From The Fort</em>, <a href="#about">VuHaus</a> is a non-profit digital video service that introduces emerging and established artists to new audiences around the world.</p>
+    <a class="name" href="https://itunes.apple.com/us/app/vuhaus-come-in.-see-the-music./id984534957?mt=8" alt="iTunes" target="_blank"><img class="badge-responsive" src="static/img/App-store-badge-01-01.png" width="100" height="50"></a>
+    <hr>
+  </div>
+{% endif %}

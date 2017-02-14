@@ -5613,28 +5613,36 @@ footer span#copyright {
   float: right;
 }
 
+
 /* line 89, ../dev/sass/_vpr.scss */
-#underwriter p {
+#lead-underwriter {
   font-size: 12px;
   padding-left: 0;
-  margin-top: 3px;
+  margin-top: 15px;
+  margin-bottom: 20px;
   text-align: center;
   color: #8f9294;
 }
+
 /* line 89, ../dev/sass/_vpr.scss */
-#underwriter h3 {
+#final-underwriter {
+  font-size: 12px;
+  padding-left: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
+  color: #8f9294;
 }
-/* line 95, ../dev/sass/_vpr.scss */
-#underwriter p li {
-  display: inline;
+
+/* line 89, ../dev/sass/_vpr.scss */
+#underwriter {
+  font-size: 12px;
+  padding-left: 0;
+  margin-top: 10px;
+  text-align: center;
+  color: #8f9294;
 }
-@media (max-width: 330px) {
-  /* line 88, ../dev/sass/_vpr.scss */
-  #underwriter {
-    margin-left: -5px;
-  }
-}
+
 
 /* line 1, ../dev/sass/_vpr-svg.scss */
 #vpr_svg {
@@ -9041,7 +9049,7 @@ footer span#copyright {
   width: 300px;
   background: #707979;
   padding: 10px;
-  margin: 0 auto 10px;
+  margin: 35px auto 10px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -9057,7 +9065,7 @@ footer span#copyright {
 @media (max-width: 500px) {
   /* line 1, ../dev/sass/_form.scss */
   .email_signup {
-    width: 100%;
+    width: 70%;
   }
 }
 /* line 13, ../dev/sass/_form.scss */
@@ -9173,6 +9181,45 @@ hr {
 /* line 22, ../dev/sass/style.scss */
 h1, h2, h3 {
   font-family: Molot;
+}
+
+/* line 27, ../dev/sass/style.scss */
+#lead-underwriter div {
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 1000px) {
+  /* line 26, ../dev/sass/style.scss */
+  #lead-underwriter {
+    float: right;
+    margin-top: 65px;
+
+
+    /* line 89, ../dev/sass/_vpr.scss */
+    #lead-underwriter {
+      font-size: 12px;
+      margin-top: 185px;
+    }
+
+  }
+}
+/* line 27, ../dev/sass/style.scss */
+#final-underwriter div {
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 1000px) {
+  /* line 26, ../dev/sass/style.scss */
+  #final-underwriter {
+    float: right;
+    margin-top: 100px;
+
+    /* line 89, ../dev/sass/_vpr.scss */
+    #final-underwriter {
+      font-size: 12px;
+    }
+
+  }
 }
 
 /* line 27, ../dev/sass/style.scss */
