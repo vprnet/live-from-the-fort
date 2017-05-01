@@ -1441,7 +1441,7 @@ a {
 /* line 913, ../dev/sass/_bootstrap.scss */
 a:hover,
 a:focus {
-  color: #2a6496;
+  color: #F7941D;
   text-decoration: underline;
 }
 
@@ -5532,7 +5532,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 
 /* line 19, ../dev/sass/_vpr.scss */
 a {
-  color: #307fe2;
+  color: #8f9294;
 }
 
 /* line 23, ../dev/sass/_vpr.scss */
