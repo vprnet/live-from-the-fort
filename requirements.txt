@@ -12,3 +12,6 @@ python-google-spreadsheet==2.0.0
 python-slugify==0.0.7
 requests==2.2.1
 wsgiref==0.1.2
+gspread
+oauth2client==1.5.2
+pycrypto
